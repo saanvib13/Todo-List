@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
+body {
+  background-color: rgb(32, 32, 72);
+  /* display: flex; */
+  flex-direction: column;
+  min-height: 100vh;
+}
+form {
+  display: flex;
+}
+#header {
+  padding: 3rem;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 90%;
+}
+h1 {
+  font-family: "Lato", sans-serif;
+  color: rgb(243, 191, 191);
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+input:not([type="checkbox"]),
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+.add {
+  flex: 1 1 0%;
+  background: rgb(56, 56, 64) !important;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-right: 0.75rem;
+  font-size: 1.17rem;
+  color: #fff;
+}
+.add::placeholder {
+  color: rgb(168, 145, 145);
+}
+.submit {
+  background-image: linear-gradient(to right, yellow, orange);
+  font-size: 1.17rem;
+  font-weight: 800;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+.submit:hover {
+  background-image: none;
+  -webkit-text-fill-color: rgb(72, 255, 0);
+}
+.main {
+  flex: 1 1 0%;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+}
+#tasks h3 {
+  font-family: "Lato", sans-serif;
+  color: rgb(191, 217, 243);
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+}
+#tasks .list .content {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  background: rgb(56, 56, 64);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 0.75rem;
+}
+input[type="checkbox"] {
+  display: none;
+}
+.checkdiv {
+  display: flex;
+  flex: 1 1 0%;
+}
+.check {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid rgb(17, 223, 255);
+  margin-right: 1rem;
+}
+
+.check::after {
+  content: "";
+  display: block;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  background-color: aqua;
+  border-radius: 50%;
+  transition: 0.2s ease-in-out;
+}
+
+input:checked ~ .check::after {
+  width: 9px;
+  height: 9px;
+  opacity: 1;
+}
+.content.done .mytask input {
+  text-decoration: line-through;
+  transition: 0.5s ease;
+  color: rgb(255, 77, 0) !important;
+}
+
+#tasks .list .content .mytask {
+  flex: 1 1 0%;
+}
+
+#tasks .list .content .mytask .text {
+  font-size: 1.125rem;
+  color: rgb(238, 255, 82);
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+#tasks .list .content .actions {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+#tasks .list .content .actions button {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+#tasks .list .content .actions .edit {
+  background-image: linear-gradient(
+    to right,
+    rgb(217, 194, 194),
+    rgb(207, 38, 201)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#tasks .list .content .actions .delete {
+  color: crimson;
+}
